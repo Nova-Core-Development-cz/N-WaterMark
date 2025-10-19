@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Watermark</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: Arial, sans-serif;
+    }
+
+    #watermark {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+      pointer-events: none;
+      animation: jump 1s infinite ease-in-out, colorChange 3s infinite linear;
+    }
+
+    @keyframes jump {
+      0% { transform: translateY(0px); }
+      25% { transform: translateY(-2px); }
+      50% { transform: translateY(0px); }
+      75% { transform: translateY(2px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes colorChange {
+      0%   { color: rgb(255,0,0); }
+      16%  { color: rgb(255,127,0); }
+      33%  { color: rgb(255,255,0); }
+      50%  { color: rgb(0,255,0); }
+      66%  { color: rgb(0,0,255); }
+      83%  { color: rgb(75,0,130); }
+      100% { color: rgb(148,0,211); }
+    }
+  </style>
+</head>
+<body>
+  <div id="watermark">Nova Core</div>
+</body>
+</html>
